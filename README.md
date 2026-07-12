@@ -1,2 +1,2 @@
-# smart-cashier-system.
-my first professionall smart cashier app system.
+# 2*smart-cashier-system.
+An improved cashier system using functions, lists, and dictionaries.
