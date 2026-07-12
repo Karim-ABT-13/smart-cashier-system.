@@ -1,3 +1,4 @@
+
 #bissmillah
 #1- LOGIN SYSTEM:________________________________________________________________________________
 
@@ -27,11 +28,18 @@ while chance <3 and (username != "admin" or password != 11):
         print("your chances has blocked!!")
         exit()
     
-if username == "admin" and password == 11:
+    
+    
+def welcom_to_the_store():
     print("-" * 30)
     print("    WELCOM TO THE STORE")
     print("-" * 30)
-    
+if username == "admin" and password == 11:
+    welcom_to_the_store()
+
+
+
+
 #2- PAGE OF CHOICES:________________________________________________________________________________
 choices = ["show products" , "buy products" , "show my cart" , "exit"]
 print("1.",choices[0],)
@@ -40,6 +48,9 @@ print("3.",choices[2],)
 print("4.",choices[3],)
 print()
 choose = input("shoose an option:")
+
+
+
 
 def show_products():
     products = {
@@ -104,19 +115,31 @@ while answer == "yes":
 
     for i in products:
         print(i, products[i])
-    
+ 
     answer = input("do you want to exit  yes/no: ")
+else:
+    print("sorry this contunue is not defined!")
     
 
-    
+#3- BUY PRODUCTS:
 
+def choose2():
+    print("_" * 30)
+    print("   products")
+    print("_" * 30)
 
+if choose == "2" or choose == "buy products":
+    choose2()
 
+for i in products:
+    print(i, products[i])
 
+cart =  []
 
+buying = input("what do you want to buy it?? : ")
+quantity = int(input("enter the quantity : "))
 
-
-
-
-
+cart.append(buying * quantity)
+print("the product added to your cart succesfuly. Thank you.")
+print(cart)
 
