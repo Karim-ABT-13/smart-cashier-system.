@@ -69,30 +69,11 @@ if choose == "1" or choose == "show products":
     show_products()
     
             
-answer = input("do you want to exit  yes/no: ")
+
 print("_" * 30)
 
-while answer == "no" :
-    print("okay , you are still here!")
-    print("_" * 30)
-    print("all products:")
-    print()
-    products = {
-        "milk": 120,
-        "eggs": 150,
-        "butter": 90,
-        "rice": 190
-        }
 
-    for i in products:
-        print(i, products[i],"$")
-        
-    answer = input("do you want to exit  yes/no: ")
-    
-    
-print()
-
-
+answer = input("do you want to exit  yes/no: ")
 while answer == "yes":
     choices = ["show products" , "buy products" , "show my cart" , "exit"]
     print("1.",choices[0],)
@@ -113,33 +94,58 @@ while answer == "yes":
             "rice": 190
         }
 
-    for i in products:
-        print(i, products[i])
- 
-    answer = input("do you want to exit  yes/no: ")
-else:
-    print("sorry this contunue is not defined!")
-    
-
+        for i in products:
+            print(i, products[i])
+            
+            
 #3- BUY PRODUCTS:
 
-def choose2():
+        def choose2():
+            print("_" * 30)
+            print("   products")
+            print("_" * 30)
+
+    elif choose == "2" or choose == "buy products":
+        choose2()
+
+        for i in products:
+            print(i, products[i])
+
+        cart =  []
+
+        buying = input("what do you want to buy it?? : ")
+        quantity = int(input("enter the quantity : "))
+
+        cart.append(buying)
+        print("the product added to your cart succesfuly. Thank you.")
+        print(cart)
+
+
+ 
+    answer = input("do you want to exit  yes/no: ")
+
+while answer == "no" :
+    print("okay , you are still here!")
     print("_" * 30)
-    print("   products")
-    print("_" * 30)
+    print("all products:")
+    print()
+    products = {
+        "milk": 120,
+        "eggs": 150,
+        "butter": 90,
+        "rice": 190
+        }
 
-if choose == "2" or choose == "buy products":
-    choose2()
+    for i in products:
+        print(i, products[i],"$")
+        
+    answer = input("do you want to exit?  yes/no: ")
 
-for i in products:
-    print(i, products[i])
+print()
 
-cart =  []
 
-buying = input("what do you want to buy it?? : ")
-quantity = int(input("enter the quantity : "))
 
-cart.append(buying * quantity)
-print("the product added to your cart succesfuly. Thank you.")
-print(cart)
+
+
+
 
