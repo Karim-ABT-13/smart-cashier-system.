@@ -1,151 +1,138 @@
+#1- login system:
 
-#bissmillah
-#1- LOGIN SYSTEM:________________________________________________________________________________
+def welcom():
+    print("=" * 144)
+    print("                                        welcom to the cashier")
+    print("=" * 144)
+welcom()
 
-def welcome():
-    print("=" * 40)
-    print("     WELCOME TO THE CASHIER")
-    print("=" * 40)
+print()
 
-welcome()
+username = input("enter the username:  ")
+password = str(input("enter the password:  "))
 
-
-username = "admin"
-password = 11
-
-username = input("enter the username:")
-password = int(input("enter the password:"))
+print()
 
 chance = 0
-while chance <3 and (username != "admin" or password != 11):
-    print()
-    print("wrong username or password!!")
+while chance <3 and (username != "admin" or password != "1"):
+    print("error, wrong username or password!")
     chance +=1
-    username = input("enter the username again:")
-    password = int(input("enter the password again:"))
     print()
-    if chance == 3 :
+    
+    username = input("enter the username: ")
+    password = str(input("enter the password: "))
+    
+    print()
+    
+    if chance == 2 and (username != "admin" or password != "1"):
         print("your chances has blocked!!")
         exit()
-    
-    
-    
-def welcom_to_the_store():
-    print("-" * 30)
-    print("    WELCOM TO THE STORE")
-    print("-" * 30)
-if username == "admin" and password == 11:
-    welcom_to_the_store()
-
-
-
-
-#2- PAGE OF CHOICES:________________________________________________________________________________
-choices = ["show products" , "buy products" , "show my cart" , "exit"]
-print("1.",choices[0],)
-print("2.",choices[1],)
-print("3.",choices[2],)
-print("4.",choices[3],)
-print()
-choose = input("shoose an option:")
-
-
-
-
-def show_products():
-    products = {
-    "milk": 120,
-    "eggs": 150,
-    "butter": 90,
-    "rice": 190
-    }
-    for i in products:
-        print(i, products[i],"$")
         
-if choose == "1" or choose == "show products":
-    print("_" * 30)
-    print("   all products:")
-    print("_" * 30)
-    show_products()
+#2- main menu:
+
+def welcom_to_main_menu():
+    print("=" * 30)
+    print("   MAIN MENU")
+    print("=" * 30)
+welcom_to_main_menu()
+
+
+def page_of_choices():
+    choices = {
+        "show and buy products",
+        "show my cart",
+        "exit"
+    }
     
-            
+    for i in choices:
+        print(i)
+page_of_choices()
 
-print("_" * 30)
+print()
 
+choice = input("what do you want?: ")
 
-answer = input("do you want to exit  yes/no: ")
-while answer == "yes":
-    choices = ["show products" , "buy products" , "show my cart" , "exit"]
-    print("1.",choices[0],)
-    print("2.",choices[1],)
-    print("3.",choices[2],)
-    print("4.",choices[3],)
-    print()
-    choose = input("shoose an option:")
+#3- page of choices:_________________________________
 
-    if choose == "1" or choose == "show products":
+if choice == "show and buy products":
+    def products():
         print("_" * 30)
-        print("all products:")
-        print()
         products = {
             "milk": 120,
-            "eggs": 150,
-            "butter": 90,
-            "rice": 190
+            "butter": 140,
+            "rice": 100,
+            "water": 50
         }
 
-        for i in products:
-            print(i, products[i])
+        for x in products:
+            print(x, products[x], "$")
             
-            
-#3- BUY PRODUCTS:
+    products()
+    
+print("_" * 40)
 
-        def choose2():
-            print("_" * 30)
-            print("   products")
-            print("_" * 30)
+buy = input("what do you want to buy it? ")
+quantity1 = int(input("enter the quantity: "))
 
-    elif choose == "2" or choose == "buy products":
-        choose2()
+print("_" * 40)
 
-        for i in products:
-            print(i, products[i])
-
-        cart =  []
-
-        buying = input("what do you want to buy it?? : ")
-        quantity = int(input("enter the quantity : "))
-
-        cart.append(buying)
-        print("the product added to your cart succesfuly. Thank you.")
-        print(cart)
-
-
- 
-    answer = input("do you want to exit  yes/no: ")
-
-while answer == "no" :
-    print("okay , you are still here!")
-    print("_" * 30)
-    print("all products:")
-    print()
-    products = {
-        "milk": 120,
-        "eggs": 150,
-        "butter": 90,
-        "rice": 190
-        }
-
-    for i in products:
-        print(i, products[i],"$")
+cart1 = []
+if buy == "milk":
+    cart1.append("milk")
+    print(":::   the product added to your cart successfully   :::")
+    print("_" * 50)
+    
+    
+    
+    buy = input("do you want to buy another prodduct?  yes/no :  ") 
+    
+    if buy == "no":
+        print("okay, thank you sir for shopping with US, this is your cart:",cart1,quantity1)
+        exit()
         
-    answer = input("do you want to exit?  yes/no: ")
-
-print()
-
-
-
-
-
-
-
+        
+    if buy == "yes":
+        cart2 = [] 
+        
+        buy = input("what do you want to buy it? ")
+        quantity2 = int(input("enter the quantity: "))
+        
+        if buy == "butter":
+            cart2.append ("butter")
+            print("_" * 50)
+            print(":::   the product added to your cart successfully   :::")
+            print("_" * 50)
+            
+            
+        buy = input("do you want to buy another product?  yes/no:  ")
+            
+        if buy == "no":
+            print("thank you sir for shopping with US, this is your cart:", (cart1, quantity1 , cart2, quantity2))
+            
+        if buy == "yes":
+            cart3 = []
+                
+            buy = input("what do you want to buy it?  ")
+            quantity3 = int(input("enter the quantity: "))
+                
+            if buy == "rice":
+                cart3.append("rice")
+                print(":::   the product added to your cart successfully   :::")
+                print()
+            buy = input("do you want to buy another product?  yes/no :  ")
+                    
+            if buy == "no" :
+                print("thank you sir for shopping with US, this is your cart:",(cart1,quantity1), (cart2,quantity2), (cart3,quantity3))
+        
+            if buy == "yes":
+                buy = input("what do you want to buy it ? :")
+                quantity4 = int(input("enter the quantity: "))
+            
+                cart4 = []
+            
+                if buy == "water":
+                    cart4.append("water")
+                    print(":::   the product added to your cart successfully   :::")
+                    print("this is your cart:",(cart1,quantity1), (cart2,quantity2), (cart3,quantity3), (cart4,quantity4))
+        
+        
