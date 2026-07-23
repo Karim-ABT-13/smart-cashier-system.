@@ -2,12 +2,12 @@
 #1- login system:
 
 def welcom():
+    # 
     print("=" * 144)
     print("                                        welcom to the cashier")
     print("=" * 144)
 welcom()
 
-print()
 
 username = input("enter the username:  ")
 password = str(input("enter the password:  "))
@@ -32,16 +32,24 @@ while chance <3 and (username != "admin" or password != "1"):
 #2- main menu:
 
 def show_products():
+
+    print("=====SHOW PRODUCTS=====")
+
     choices = ["1.Show Products", "2.Buy Product", "3.Show my Cart", "4.Exit"]
 
     for i in choices:
-    print(i)
+        print(i)
 
     print()
     do_you_want_to_buy = input("do you want to buy a  product?  yes/no: ")
     if do_you_want_to_buy == "yes":
 
         def buy_products():
+
+            print()
+            print("---- LIST OF PRODUCTS ----")
+
+            print()
 
             products = {
                 "butter": 120,
@@ -64,7 +72,7 @@ def show_products():
                 cart = []
 
                 if choose == "butter" :
-                    cart.append "butter"
+                    cart.append ("butter")
                     print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
                     print("the price is:", 120 * quantity)
 
@@ -78,7 +86,7 @@ def show_products():
                     cart = ["butter"]
 
                     if choose == "rice":
-                        cart.append "rice"
+                        cart.append ("rice")
                         print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
                         print("the price is:", 100 * quantity)
 
@@ -92,18 +100,257 @@ def show_products():
                     cart = ["butter", "rice"]
 
                     if choose == "juice":
-                        cart.append "juice"
+                        cart.append ("juice")
                         print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
                         print("the price is:", 50 * quantity)
 
-                buy_another_product= 
-                            
+                buy_another_product = input("do you want to buy another product  yes/no:  ")
+                if buy_another_product == "yes": 
+                    print(x)
+
+                    choose = input("what do you want to buy it? : ")
+                    quantity = int(input("enter the quantity: "))
+
+                    cart = ["butter", "rice", "juice"]
+
+                    if choose == "lemonade":
+                        cart.append ("lemonade")
+                        print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
+                        print("the price is:", 60 * quantity)
+
+                buy_another_product = input("do you want to buy another product?  yes/no: ")
+                if buy_another_product == "yes":
+                    print(x)
+
+                    choose = input("what do you want to buy it? : ")
+                    quantity = int(input("enter the quantity: "))
+
+                    cart = ["butter", "rice", "juice", "lemonade"]
+
+                    if choose == "water":
+                        cart.append ("water")
+                        print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::") 
+                        print("the price is:", 45 * quanntity)
+
+                buy_another_product = input("do you want to buy another product?  yes/no:  ")
+                if buy_another_product == "yes":
+                    print(x)   
+
+                    choose = input("what do want to buy it? : ") 
+                    quantity = int(input("enter the quatity: "))
+
+                    cart =  ["butter", "rice", "juice", "lemonade", "water"]
+
+                    if choose == "orange":
+                        cart.append ("orange")
+                        print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+                        print("the price is:", 30 * quantity)
+
+
+                buy_another_product = input("do you want to buy another product?  yes/no:  ")
+                if buy_another_product == "yes":
+                    print(x)   
+
+                    choose = input("what do want to buy it? : ")
+                    quantity = int(input("enter the quatity: "))
+
+                    cart =  ["butter", "rice", "juice", "lemonade", "water", "orange"]
+
+                    if choose == "banana":
+                        cart.append ("banana")
+                        print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+                        print("the price is:", 55 * quantity)
+
+
+                buy_another_product = input("do you want to buy another product?  yes/no:  ")
+                if buy_another_product == "yes":
+                    print(x)   
+
+                    choose = input("what do want to buy it? : ")
+                    quantity = int(input("enter the quatity: "))
+
+                    cart =  ["butter", "rice", "juice", "lemonade", "water", "orange", "banana"]
+
+                    if choose == "apple":
+                        cart.append ("apple")
+                        print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+                        print("the price is:", 46 * quantity)
 
 
 
+                buy_another_product = input("do you want to buy another product?  yes/no:  ")
+                if buy_another_product == "yes":
+                    print(x)   
+
+                    choose = input("what do want to buy it? : ")
+                    quantity = int(input("enter the quatity: "))
+
+                    cart =  ["butter", "rice", "juice", "lemonade", "water", "orange", "banana", "apple"]
+
+                    if choose == "milk":
+                        cart.append ("milk")
+                        print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+                        print("the price is:", 90 * quantity)
+
+
+if choices == "1":
+    chow_products()
+
+# 2- i will work on 2nd choice right now (///buy product///)
+
+def buy_products():
+
+    print("=====BUY PRODUCT=====")
+
+    choices = ["1.Show Products", "2.Buy Product", "3.Show my Cart", "4.Exit"]
+
+    for choice in choices:
+        print(choice)
+
+    print()
+
+    print("---- LIST OF PRODUCTS ----")
+    print()
+
+    products = {
+                "butter": 120,
+                "rice": 100,
+                "juice": 50,
+                "lemonade": 60,
+                "water": 45,
+                "orange": 30,
+                "banana": 55,
+                "apple": 46,
+                "milk": 90
+            }
+
+    for product in products:
+        print(product)
+
+    if choose == "butter" :
+        cart.append ("butter")
+        print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
+        print("the price is:", 120 * quantity)
+
+        buy_another_product = input("do you want to buy another product?  yes/no:  ")
+        if buy_another_product == "yes" : 
+            print(x)
+
+            choose = input("what do you want to buy it? : ")
+            quantity = int(input("enter the quantity: "))
+
+            cart = ["butter"]
+
+            if choose == "rice":
+                cart.append ("rice")
+                print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
+                print("the price is:", 100 * quantity)
+
+        buy_another_product = input("do you want to buy another product?  yes/no: ")
+        if buy_another_product == "yes":
+            print(x)
+
+            choose = input("what do you want to buy it? : ")
+            quantity = int(input("enter the quantity: "))
+
+            cart = ["butter", "rice"]
+
+            if choose == "juice":
+                cart.append ("juice")
+                print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
+                print("the price is:", 50 * quantity)
+
+        buy_another_product = input("do you want to buy another product  yes/no:  ")
+        if buy_another_product == "yes": 
+            print(x)
+
+            choose = input("what do you want to buy it? : ")
+            quantity = int(input("enter the quantity: "))
+
+            cart = ["butter", "rice", "juice"]
+
+            if choose == "lemonade":
+                cart.append ("lemonade")
+                print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::", cart)
+                print("the price is:", 60 * quantity)
+
+        buy_another_product = input("do you want to buy another product?  yes/no: ")
+        if buy_another_product == "yes":
+            print(x)
+
+            choose = input("what do you want to buy it? : ")
+            quantity = int(input("enter the quantity: "))
+
+            cart = ["butter", "rice", "juice", "lemonade"]
+
+            if choose == "water":
+                cart.append ("water")
+                print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::") 
+                print("the price is:", 45 * quanntity)
+
+        buy_another_product = input("do you want to buy another product?  yes/no:  ")
+        if buy_another_product == "yes":
+            print(x)   
+
+            choose = input("what do want to buy it? : ") 
+            quantity = int(input("enter the quatity: "))
+
+            cart =  ["butter", "rice", "juice", "lemonade", "water"]
+
+            if choose == "orange":
+                cart.append ("orange")
+                print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+                print("the price is:", 30 * quantity)
+
+
+        buy_another_product = input("do you want to buy another product?  yes/no:  ")
+        if buy_another_product == "yes":
+            print(x)   
+
+            choose = input("what do want to buy it? : ")
+            quantity = int(input("enter the quatity: "))
+
+            cart =  ["butter", "rice", "juice", "lemonade", "water", "orange"]
+
+            if choose == "banana":
+                cart.append ("banana")
+                print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+                print("the price is:", 55 * quantity)
+
+
+        buy_another_product = input("do you want to buy another product?  yes/no:  ")
+        if buy_another_product == "yes":
+            print(x)   
+
+            choose = input("what do want to buy it? : ")
+            quantity = int(input("enter the quatity: "))
+
+            cart =  ["butter", "rice", "juice", "lemonade", "water", "orange", "banana"]
+
+            if choose == "apple":
+            cart.append ("apple")
+            print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+            print("the price is:", 46 * quantity)
 
 
 
+        buy_another_product = input("do you want to buy another product?  yes/no:  ")
+        if buy_another_product == "yes":
+            print(x)   
+
+            choose = input("what do want to buy it? : ")
+            quantity = int(input("enter the quatity: "))
+
+            cart =  ["butter", "rice", "juice", "lemonade", "water", "orange", "banana", "apple"]
+
+            if choose == "milk":
+                cart.append ("milk")
+                print(":::   the product", "'", choose, "'", "added to your cart successfuly   :::")
+                print("the price is:", 90 * quantity)
 
 
+if choices == "1":
+    show_products()
 
+if choices == "2":
+    buy_product
